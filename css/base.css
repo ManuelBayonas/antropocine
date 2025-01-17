@@ -1,0 +1,125 @@
+/* base.css */
+
+/* Variables globales de colores */
+:root {
+    --color-white: #FFFFFF;
+    --color-moss-green: #8dd1c7;
+    --color-clay-orange: #F49E71;
+    --color-watercolor-gray: #575F67;
+    --color-raisin-black: #272222;
+}
+
+/* Tipografías globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--color-raisin-black);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+h {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+blockquote {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--color-watercolor-gray);
+    border-left: 4px solid var(--color-clay-orange);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+/* Botones */
+button {
+    background: linear-gradient(to right, var(--color-moss-green), var(--color-clay-orange));
+    color: var(--color-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to left, var(--color-clay-orange), var(--color-moss-green));
+}
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-moss-green);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Media Queries */
+@media (min-width: 680px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+}

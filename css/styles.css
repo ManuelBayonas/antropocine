@@ -1,0 +1,949 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar en pantalla */
+    padding: 0; /* Espaciado interno */
+    margin-top: 4rem;
+}
+/* HEADER CONTAINER */
+.header-container {
+    position: fixed; /* Siempre visible */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 4rem; /* Altura fija */
+    top: 0;
+    left: 0;
+    display: flex; /* Flex para distribuir los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrado vertical */
+    padding: 0 1rem; /* Espaciado interno horizontal */
+    background-color: var(--color-white); /* Fondo blanco */
+    z-index: 1000; /* Encima de otros elementos */
+}
+
+/* HEADER - BOTONES Y LOGO */
+.header-container > div {
+    display: flex; /* Flexbox para organizar los elementos */
+    align-items: center; /* Centrado vertical */
+    justify-content: space-between; /* Espaciado uniforme */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    gap: 1rem;
+}
+
+/* BOTÓN DEL MENÚ Y DE USUARIO */
+#menu-toggle, #user-access {
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    padding: 0; /* Sin relleno extra */
+    cursor: pointer; /* Cursor interactivo */
+    flex-shrink: 0; /* Evita que los íconos se reduzcan */
+}
+
+#menu-toggle img, #user-access img {
+    width: 32px; /* Tamaño del ícono */
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle img:hover {
+    content: url('../assets/icons/menu_hover.svg');/*cambio de icono al pasar por encima*/
+}
+#user-access img:hover{
+    content: url('../assets/icons/user_hover.svg');/*cambio de icono al pasar por encima*/
+}
+/* LOGO */
+.header-container img {
+    width: auto; /* Escala según el contenido */
+    max-height: 3rem; /* Limitar altura */
+    object-fit: contain; /* Escala proporcional */
+    flex-grow: 1; /* El logo ocupa el espacio central sobrante */
+}
+
+/* MENÚ NAV (OCULTO POR DEFECTO) */
+nav.dropdown {
+    display: none; /* Ocultar inicialmente */
+    position: absolute; /* Relativo al header */
+    top: 0; /* Comienza en la parte superior */
+    left: 0; /* Alineado a la izquierda */
+    transform: translateY(-100%); /* Oculto hacia arriba */
+    width: 50%; /* Menú ocupará la mitad del ancho */
+    background-color: rgba(255,255,255,0.9); /* Fondo blanco semitransparente */
+    z-index: 2000;/*Asegura que el menú esté encima de todo*/
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* MENÚ ACTIVO */
+nav.dropdown.active {
+    display: block; /* Mostrar el menú */
+    transform: translateY(0); /* Deslizar hacia abajo */
+    opacity: 1; /* Hacer visible */
+}
+
+/* Contenido del menú */
+nav.dropdown ul {
+    list-style: none; /* Sin viñetas */
+    margin: 0; /*Sin margen*/
+    padding: 1rem; /* Espaciado interno */
+}
+
+nav.dropdown ul li {
+    padding: 0.5rem 0;
+}
+
+nav.dropdown ul li:last-child {
+    border-bottom: none; /* Sin borde para el último */
+}
+
+nav.dropdown ul li a {
+    font-size: 1rem; /* Tamaño del texto */
+    color: var(--color-raisin-black); /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* El enlace ocupa todo el ancho */
+}
+
+nav.dropdown ul li a:hover {
+    color: var(--color-clay-orange); /* Cambia el color al hover */
+}
+
+/* SECCIÓN DESTACADA */
+.highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+/* VÍDEO */
+.banner-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* CONTENEDOR DEL TÍTULO Y TEXTO */
+.highlight-title {
+    display: flex; /* Flex para organizar el contenido */
+    flex-direction: column; /* Título encima, texto con ícono debajo */
+    align-items: flex-start; /* Todo alineado al borde izquierdo */
+    width: 100%; /* Asegura que ocupa el ancho completo */
+    padding: 0; /* Elimina el padding existente */
+    margin-left: 1rem;
+}
+
+
+/* TEXTO CON ICONO */
+.text-with-icon {
+    display: flex; /* Flex para organizar el contenido */
+    align-items: center; /* Centrar verticalmente el ícono y texto */
+    justify-content: flex-start; /* Justificar elementos al inicio (izquierda) */
+    gap: 0.5rem; /* Espaciado entre ícono y texto */
+    margin-left: 0; /* Asegura que no haya margen adicional */
+    padding-left: 0; /* Quita cualquier padding extra */
+}
+
+/* ICONO DEL PREMIO */
+.text-with-icon .text-icon {
+    width: 32px; /* Tamaño del icono */
+    height: 32px;
+    flex-shrink: 0; /* Evita que el icono se reduzca */
+}
+
+/* TÍTULO DEL VÍDEO */
+.video-title {
+
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.video-title p {
+    margin: 0; /* Elimina márgenes extra */
+    text-align: left; /* Asegura alineación a la izquierda */
+}
+
+/* SECCIÓN CATEGORÍAS */
+.other-categories {
+    display: flex; /* Alinea los elementos en fila */
+    flex-direction: column; /* Alineación vertical en pantallas pequeñas */
+    gap: 2rem; /* Espaciado entre categorías */
+    align-items: center; /* Centra el contenido */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+}
+
+/* CATEGORÍA INDIVIDUAL */
+.other-categories > div {
+    display: flex; /* Alinea la imagen y el texto en fila */
+    align-items: center; /* Centrado vertical */
+    gap: 1.5rem; /* Espaciado entre la imagen y el texto */
+    max-width: 800px; /* Limita el ancho máximo */
+    text-align: left; /* Alineación del texto */
+}
+
+/* IMAGEN REDONDA */
+.round-image {
+    width: 80px; /* Tamaño de la imagen */
+    height: 80px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Ajusta el contenido de la imagen */
+    
+}
+
+/* TITULO DE LA CATEGORÍA */
+.category-title h2 {
+    color: var(--color-raisin-black);
+    font-size: 1.6rem; 
+    margin: 0; /* Elimina márgenes extra */
+    letter-spacing: 0.05em; /* Ajuste de espaciado entre letras */
+}
+
+/* DESCRIPCIÓN DE LA CATEGORÍA */
+.category-title p {
+    color: var(--color-watercolor-gray); 
+    margin: 0; /* Elimina márgenes extra */
+    line-height: 1.4; /* Espaciado entre líneas */
+}
+
+/* SECCIÓN GANADORES */
+.winners h2{
+    text-align: center;
+    color: var(--color-raisin-black);
+}
+.winners {
+    display: flex; /* Alinea los elementos en fila */
+    flex-direction: column; /* Columnas en pantallas pequeñas */
+    gap: 1.5rem; /* Espaciado entre los elementos */
+    padding: 2rem 1rem; /* Espaciado interno */
+    align-items: center; /* Centra el contenido */
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.95),
+            rgba(255,255,255, 0.3),
+            rgba(255, 255, 255, 0.95)
+        ),
+        url('../assets/images/fondos/degradado_lineas.webp') center / cover repeat;
+    background-size: 200%;
+    background-position-x: 10%;
+}
+    
+/* DETALLE INDIVIDUAL DEL GANADOR */
+.winner-detail {
+    display: flex; /* Alinea imagen y texto en fila */
+    flex-direction: column; /* Vertical para pantallas pequeñas */
+    gap: 1rem; /* Espaciado entre imagen y texto */
+    align-items: center; /* Centra el contenido */
+    max-width: 600px; /* Ancho máximo */
+    text-align: center; /* Centra el texto */
+}
+.image-with-icon{
+    display:flex;
+    flex-direction: row;/*Coloca el icono al lado de la imagen*/
+    align-items: center;/*Centra el icono y la imagen*/
+}
+
+
+/* IMAGEN REDONDEADA */
+.rounded-image {
+    width: 80%;
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    border-radius:70px; /* Esquinas redondeadas */
+    object-fit: cover; /* Ajusta el contenido de la imagen */
+}
+/* CONTENEDOR DEL TÍTULO Y LOS AUTORES */
+.film-title {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Título a la izquierda, autores a la derecha */
+    align-items:center; /* Alinea los textos por su línea base */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio */
+    gap: 1rem; /* Espaciado entre los elementos si se ajustan */
+    width: 100%; /* Asegura que ocupen el ancho completo */
+}
+/* TÍTULO DE LA PELÍCULA */
+.film-title .title {
+    font-weight: lighter;
+    color: var(--color-raisin-black); /* Color del título */
+    margin: 0; /* Elimina márgenes extra */
+    text-align: right; /* Alineación a la izquierda */
+    flex: 1; /* Ocupa el espacio necesario */
+}
+
+/* AUTORES */
+.film-title .authors {
+    color: var(--color-watercolor-gray); /* Color de los autores */
+    font-weight: 700; /* Negrita */
+    margin: 0; /* Elimina márgenes extra */
+    text-align: left; /* Alineación a la derecha */
+    flex: 1; /* Ocupa el espacio necesario */
+    font-size:1.2rem;/*Reducción del tamaño*/
+}
+
+/* DESCRIPCIÓN */
+.winner-detail .film-title p {
+    color: var(--color-watercolor-gray); /* Color gris */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0;
+    text-align: center;
+}
+
+/*SECCIÓN SLIDER*/
+.image-slider h2{
+    text-align: center;
+    color: var(--color-moss-green);
+}
+/* CONTENEDOR SLIDER PRINCIPAL */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* CONTENEDOR DE SLIDES */
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación suave */
+}
+
+/* SLIDE INDIVIDUAL */
+.slide {
+    min-width: 100%; /* Cada slide ocupa todo el ancho */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.5s ease-in-out; /* Transición suave */
+    position: absolute; /* Superpone los slides */
+    top: 0;
+    left: 0;
+}
+
+.slide.active {
+    opacity: 1; /* Sólo el slide activo es visible */
+    position: relative;
+}
+
+/* IMÁGENES */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CONTROLES */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%; /*Área clicable cubre la mitad del slider */
+    height: 100%;
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0; /* Completamente invisible */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    opacity: 0.4; /* Ligera visibilidad al pasar el ratón */
+}
+/* CONTENEDOR DEL TÍTULO DENTRO DEL SLIDE */
+.slide-title {
+    position: absolute; /* Posiciona el título relativo al slide */
+    bottom: 0; /* Posición desde el borde inferior */
+    right: 0; /* Posición desde el borde derecho */
+    padding: 0rem 1rem; /* Espaciado interno */
+    color:var(--color-moss-green);
+    z-index: 10; /* Asegura que esté sobre la imagen */
+}
+
+/* SECCIÓN FILM COLLECTIONS */
+.film-collections {
+    display: flex;
+    flex-direction: column; /* Elementos apilados verticalmente */
+    text-align: center; /* Centrar el texto */
+    padding: 1.5rem 1rem; /* Espaciado interno */
+    gap: 1.5rem; /* Espaciado entre título y colecciones */
+}
+
+.film-collections h2 {
+    color: var(--color-moss-green); /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin: 0 auto; /* Centra el título */
+}
+/*Grid de las colecciones*/
+.collections-grid {
+    display: flex;
+    flex-direction: column; /* Elementos en una sola columna */
+    gap: 1.5rem; /* Espaciado entre las colecciones */
+}
+/* CONTENEDOR DE CADA COLECCIÓN */
+.collection {
+    position: relative; /* Para el contenido superpuesto */
+    margin: 0 auto; /* Centrar los contenedores */
+    max-width: 400px; /* Limita el ancho de las colecciones */
+    border-radius: 0 0 70px 70px; /* Bordes redondeados en la parte inferior */
+    overflow: hidden; /* Recorta el contenido excedente */
+    background: url('../assets/images/fondos/degradado2.webp') no-repeat center;
+    background-size: cover; /* Escala el fondo para cubrir el contenedor */
+}
+
+.collection:nth-child(odd) {
+    background: url('../assets/images/fondos/degradado_1.webp') no-repeat center;
+    background-size: cover; /* Fondo diferente para elementos impares */
+}
+/* IMAGEN */
+.collection img {
+    display: block;
+    width: 100%; /* Imagen ocupa el ancho completo */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* TÍTULO SOBRE IMAGEN */
+.collection h3 {
+    position: absolute;
+    top: 10px; /* Posición desde la parte superior */
+    left: 15px; /* Posición desde la izquierda */
+    color:var(--color-watercolor-gray); 
+    padding: 0.3rem 0.5rem; /* Espaciado interno */
+    background-color:rgba(255, 255, 255, 0.8);/*Fondo blanco semitransparente*/
+    border-radius: 5px; /* Bordes redondeados */
+    text-transform: uppercase;
+
+}
+
+/* TÍTULO DE COLECCIÓN */
+.collection h4 {
+    font-size: 1.5rem;/*tamaño más grande*/
+    font-weight:bold;
+    color: var(--color-raisin-black); /* Texto negro */
+    margin: 1rem 0 0.5rem; /* Espaciado superior e inferior */
+}
+
+/* TEXTO DESCRIPTIVO */
+.collection p {
+    text-align: center;
+    font-weight: 400; /* Regular */
+    color: var(--color-raisin-black); /* Texto negro */
+    padding: 0 3rem 1rem; /* Espaciado interno */
+}
+
+/*SECCIÓN ÚLTIMOS COMENTARIOS*/
+.comments {
+    width:100%;
+    max-width: 1200px; /* Ancho máximo de la sección */
+    margin: 2rem auto; /* Centrado horizontal */
+    padding: 2rem 0.5rem; /* Espaciado interno */
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.95),
+            rgba(255,255,255, 0.3),
+            rgba(255, 255, 255, 0.95)
+        ),
+        url('../assets/images/fondos/degradado_lineas.webp') center / cover repeat;
+    background-size: 230%;
+    background-position-x: -90%;
+}
+
+.comments h2 {
+    text-align: center; /* Centra el texto del encabezado */
+    text-transform: uppercase;
+    color: var(--color-moss-green); /* Color verde claro */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+}
+
+/* Lista de comentarios */
+.comment-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 2rem;
+}
+/* Cada comentario */
+.comment {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Ocupa el ancho completo */
+}
+.comment-header {
+    display: flex; /* Alinea los elementos en una fila */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente */
+    gap: 0.5rem; /* Espaciado entre los elementos */
+    margin-bottom: 0.8rem; /* Espaciado inferior */
+}
+.comment-header p{
+    font-size: 0.9rem;
+}
+.comment-header img {
+    width: 35px; /* Tamaño del ícono */
+    height: 35px;
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+.comment .hastag {
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase;
+    color: var(--color-raisin-black); 
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+.comment .film {
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--color-raisin-black);
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+.comment .comment-text {
+    font-weight: 400;
+    color: var(--color-raisin-black);
+    line-height: 1.6; /* Mejora la legibilidad */
+    text-align: center; /* Centra el texto */
+}
+
+
+/*SECCIÓN PATROCINADORES*/
+.partners {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 1rem; /* Espaciado entre elementos */
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; /* Ancho máximo */
+    margin: 2rem auto; /* Centrado horizontal */
+    padding: 2rem; /* Espaciado interno */
+}
+.partners h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-moss-green); /* Color verde */
+    margin-bottom: 2rem; /* Espaciado inferior */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+    grid-column: 1 / -1; /* Título ocupa todo el ancho */
+}
+.partners a{
+    justify-self: center; 
+}
+.partners img {
+    max-width: 150px; /* Limita el tamaño de los logos */
+    height: auto;
+}
+
+/* CONTENEDOR GENERAL DEL FOOTER */
+.footer {
+    background: url('../assets/images/fondos/banner_film_inferior.webp') no-repeat center;
+    background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
+    text-align: left; 
+    padding: 0.3rem 1rem; /* Espaciado interno */
+    padding-bottom: 3.6rem;
+    color:var(--color-raisin-black); /* Color de texto */
+}
+
+/* TÍTULO */
+.footer-title {
+    
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* CONTACTO */
+.footer-contact {
+    
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-contact a {
+    color:var(--color-raisin-black);
+    text-decoration: none;
+    
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    gap: 1rem; /* Espaciado entre iconos */
+    margin-bottom: 2rem;
+}
+
+.social-icons img {
+    width: 50px; /* Tamaño ajustado para los iconos */
+    height: 50px;
+    transition: transform 0.3s ease; /* Animación de hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Escala al pasar el cursor */
+}
+
+/* ENLACES DEL FOOTER */
+.footer-links {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.footer-links a {
+    color:var(--color-raisin-black);
+    text-decoration: none;
+    padding: 0 0.5rem; /* Espaciado entre enlaces */
+}
+
+.footer-links a:hover {
+    color: var(--color-clay-orange); /* Cambia de color al hover */
+}
+
+/* RESPONSIVE: ALINEACIÓN EN PANTALLAS GRANDES */
+@media (min-width: 1200px) {
+    /*HEADER*/
+    .header-container {
+        height: 4rem; /* Altura mayor */
+        padding: 0 1rem; /* Más espacio interno */
+        justify-content: space-between; /* Asegurar alineación entre logo y menú */
+    }
+
+    /* Ajuste del contenedor interno */
+    .header-container > div {
+        display: flex; /* Mantener elementos en fila */
+        justify-content: flex-start; /* Alinearlos desde la izquierda */
+        align-items: center;
+        gap: 2rem; /* Espaciado entre los elementos */
+    }
+
+    /* El logo se mantiene igual */
+    .header-container img {
+        width: 200px; /* Tamaño más grande del logo */
+    }
+
+    /* Ajuste del menú */
+    nav.dropdown {
+        display: block; /* Mostrar siempre */
+        position: static; /* No es necesario posicionamiento absoluto */
+        transform: none; /* Sin transformaciones */
+        background-color: transparent; /* Fondo transparente */
+        opacity: 1; /* Totalmente visible */
+    }
+
+    /* Lista del menú en fila */
+    nav.dropdown ul {
+        display: flex; /* Flex para colocar en fila */
+        justify-content: space-between;
+        gap: 1.5rem; /* Espaciado entre enlaces */
+        padding: 0; /* Sin margen ni padding */
+        list-style: none; /* Sin viñetas */
+    }
+
+    nav.dropdown ul li {
+        margin: 0; /* Sin márgenes verticales */
+        padding: 0; /* Sin padding */
+    }
+
+    nav.dropdown ul li a {
+        color: var(--color-raisin-black); /* Color del texto */
+        text-decoration: none; /* Sin subrayado */
+    }
+
+    nav.dropdown ul li a:hover {
+        color: var(--color-clay-orange); /* Color al hover */
+    }
+
+    /* Botón del menú no es necesario en escritorio */
+    #menu-toggle {
+        display: none; /* Ocultar botón de menú en escritorio */
+    }
+
+    /*SECCIÓN DESTACADA*/
+    .highlight {
+        display: flex;
+        flex-direction: column; /* Elementos apilados verticalmente */
+        align-items: flex-start; /* Alinear al borde izquierdo */
+        justify-content: center; /* Centrar verticalmente */
+        padding: 2rem; /* Espaciado interno */
+        gap: 1rem; /* Separar el video y el texto */
+    }
+
+    .banner-video {
+        width: 100%; /* Ocupa el ancho completo del contenedor */
+        max-width: 1000px; /* Ancho máximo del video */
+        height: auto; /* Mantener proporción del video */
+        object-fit: cover; /* Ajusta el contenido del video */
+        margin: 0 auto; /* Centrar el video horizontalmente */
+    }
+
+    .highlight-title {
+        width: 100%; /* Asegura que ocupa el ancho completo */
+        max-width: 1000px; /* Alineado con el ancho máximo del video */
+        text-align: left; /* Alinear texto al borde izquierdo */
+        padding: 0; /* Elimina el padding existente */
+        margin: 0 auto; /* Centra horizontalmente */
+    }
+
+    .text-with-icon {
+        display: flex; /* Alineación horizontal del ícono y texto */
+        align-items: center; /* Centrado vertical del ícono */
+        gap: 0.5rem; /* Espaciado entre ícono y texto */
+        width: 100%; /* Asegura alineación con el título */
+        margin: 0; /* Elimina márgenes */
+        padding-left: 0; /* Asegura alineación al borde izquierdo del título */
+    }
+
+    .text-with-icon .text-icon {
+        width: 24px; /* Tamaño del ícono */
+        height: 24px;
+        margin: 0; /* Asegura que no haya desplazamiento */
+    }
+
+    .video-title {
+        margin-top: 0.5rem; /* Espaciado entre líneas de texto */
+        margin-left: 0;
+    }
+
+    /*SECCIÓN CATEGORÍAS*/
+    .other-categories {
+        display: flex; /* Alinear categorías en fila */
+        flex-direction: row; /* Elementos en línea horizontal */
+        justify-content: center; /* Espaciado uniforme entre elementos */
+        align-items: center; /* Alinear categorías desde el inicio vertical */
+        gap: 0; /* Sin espacio adicional */
+        padding: 2rem 0; /* Espaciado interno arriba y abajo */
+        max-width: 1000px;
+        margin: 0 auto; /* Centra horizontalmente la sección en la ventana */
+    }
+
+    .other-categories > div {
+        display: flex; /* Mantener flex para imagen y texto */
+        flex-direction: row; /* Imagen encima y texto debajo */
+        align-items: center; /* Centrar contenido horizontalmente */
+        text-align: left; /* Centrar el texto */
+        padding-right: 1rem;
+    }
+
+    .round-image {
+        width: 80px; /* Tamaño de las imágenes */
+        height: 80px;
+        margin-bottom: 0.5rem; /* Espaciado entre imagen y texto */
+    }
+
+    .category-title h2 {
+        font-size: 2.5rem;
+        margin: 0; /* Eliminar márgenes adicionales */
+    }
+
+    .category-title p {
+        margin: 0.5rem 0 0 0; /* Ajustar margen superior */
+        line-height: 1.4; /* Espaciado entre líneas */
+    }
+/* SECCIÓN GANADORES */
+    .winners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+        grid-auto-rows: auto; /* Ajuste automático de las filas según el contenido */
+        gap: 2rem; /* Espaciado entre filas y columnas */
+        padding: 2rem; /* Espaciado interno */
+        background: linear-gradient(
+                rgba(255, 255, 255, 0.9),
+                rgba(255,255,255, 0.3),
+                rgba(255, 255, 255, 0.9)
+            ),
+            url('../assets/images/fondos/degradado_lineas.webp')no-repeat;
+            background-repeat: repeat-x;
+            background-size: cover;
+    }
+
+    /* DETALLE INDIVIDUAL DEL GANADOR */
+    .winner-detail {
+        display: flex;
+        flex-direction: column; /* Organizar en columna */
+        gap: 1rem; /* Espaciado entre imagen y texto */
+        align-items: center; /* Centra horizontalmente el contenido */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* IMAGEN E ICONO */
+    .image-with-icon {
+        display: flex;
+        flex-direction: row; /* Organizar icono e imagen en columna */
+        align-items: center; /* Centrar */
+        gap: 0.5rem;
+    }
+
+    .rounded-image {
+        width: 100%; /* Imagen ocupa todo el ancho disponible */
+        max-width: 600px; /* Limitar el tamaño máximo */
+        border-radius: 20px; /* Bordes redondeados */
+        object-fit: cover; /* Ajuste de imagen */
+    }
+
+    /* TÍTULOS Y DESCRIPCIÓN */
+    .film-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .film-title .title {
+        font-weight: bold;
+        color: var(--color-raisin-black);
+        margin: 0;
+    }
+
+    .film-title .authors {
+        color: var(--color-watercolor-gray);
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .film-title p {
+        color: var(--color-watercolor-gray);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* AJUSTE DEL GRID */
+    .winners > :nth-child(1) {
+        grid-column: 1 / 3; 
+        grid-row: 2/ 3; 
+    }
+    .winners > :nth-child(1) img {
+        max-width: 700px; /* Tamaño máximo */
+       
+        object-fit: cover; /* Ajustar el contenido de la imagen */
+    }
+    .winners > :nth-child(2) {
+        grid-column: 1 / 2; 
+        grid-row: 1 / 2; 
+    }
+    .winners > :nth-child(2) img {
+        max-height: 180px; /* Tamaño máximo */
+       
+        object-fit: cover; /* Ajustar el contenido de la imagen */
+    }
+    .winners > :nth-child(3) {
+        grid-column: 3/ 4; 
+        grid-row: 2 / 3; 
+    }
+
+    .winners > :nth-child(4) {
+        grid-column: 2 / 4; 
+        grid-row: 1 / 2; 
+        justify-self: end;
+    }
+    /*SECCIÓN COLECCIONES*/
+    .film-collections {
+        display: grid;
+        grid-template-rows: auto 1fr; /* Una fila para el título, otra para el grid */
+        grid-template-columns: 1fr; /* Título ocupa todo el ancho */
+        text-align: center; /* Centra el texto */
+        padding: 2rem 1rem; /* Espaciado interno */
+        gap: 2rem; /* Espaciado entre el título y las colecciones */
+        background: url('../assets/images/fondos/degradado_flor.webp') no-repeat, left;
+        background-size: contain; /* Ajusta el tamaño para contener la imagen */
+        background-position: right -30% top -250px; 
+    }
+    /* CONTENEDOR DE CADA COLECCIÓN */
+    .collection {
+        max-width: 100%; /* Deja que las colecciones se expandan en el grid */
+    }
+    .collections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Coloca colecciones en columnas */
+        gap: 2rem; /* Espaciado entre colecciones */
+    }
+    .film-collections h2 {
+         /* Tamaño mayor para pantallas grandes */
+        margin-bottom: 1rem; /* Ajusta espaciado inferior */
+    }
+
+    /*SECCIÓN ÚLTIMS COMENTARIOS*/
+    .comments {
+        display: grid;
+        grid-template-rows: auto 1fr; /* Una fila para el título y otra para los comentarios */
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+        gap: 2rem;
+        justify-items: center;
+        text-align: center; /* Centra el contenido de la sección */
+        background: url('../assets/images/fondos/degradado_flor.webp') no-repeat, left;
+        background-size: contain;
+        background-position: -30% center;
+    }
+
+    .comments h2 {
+        grid-column: 1 / -1; /* El título ocupa las tres columnas */
+        margin-bottom: 2rem; /* Separación inferior */
+    }
+
+    .comment-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para los comentarios */
+        grid-template-rows: auto auto; /* Dos filas */
+        gap: 2rem; /* Espaciado entre comentarios */
+        grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+    }
+    .comment-list .comment:nth-child(1) {
+        grid-column: 2; /* Coloca el primer comentario en la segunda columna */
+    }
+    
+    .comment-list .comment:nth-child(2) {
+        grid-column: 3; /* Coloca el segundo comentario en la tercera columna */
+    }
+    
+    .comment-list .comment:nth-child(3) {
+        grid-column: 2; /* Coloca el tercer comentario en la segunda columna (nueva fila) */
+    }
+    
+    .comment-list .comment:nth-child(4) {
+        grid-column: 3; /* Coloca el cuarto comentario en la tercera columna (nueva fila) */
+    }
+
+    .comment-header {
+        justify-content: start; /* Alineación izquierda para el header */
+    }
+
+    /*SECCIÓN PATROCINADORES*/
+    .partners {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+        gap: 2rem; /* Más espacio entre elementos */
+    }
+    .partners img {
+        max-width: 200px; /* Ajusta el tamaño de los logos */
+    }
+    /*FOOTER*/
+    .footer {
+        background: url('../assets/images/fondos/footer_desktop.webp');
+        max-width: 1200px;
+        text-align: left; /* Texto alineado a la izquierda */
+        padding: 3rem 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .footer-title {
+        font-size: 1.5rem;
+    }
+
+    .footer-contact {
+        font-size: 1.1rem;
+    }
+
+    .social-icons {
+        justify-content: flex-start; /* Alinea los iconos a la izquierda */
+    }
+
+    .footer-links {
+        justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+        font-weight: bold;
+    }
+}
+

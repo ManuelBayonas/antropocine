@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <!-- Botón del menú -->
+            <button id="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
+                <img src="../assets/icons/menu.svg" alt="Abrir menú">
+            </button>
+        
+            <!-- Logo -->
+            <a href="../views/index.html" class="header-logo">
+                <img src="../assets/icons/antropocine.svg" alt="Antropocine Logo">
+            </a>
+        
+            <!-- Menú desplegable -->
+            <nav id="menu" class="dropdown" aria-hidden="true">
+                <ul>
+                    <li><a href="#festival">Festival</a></li>
+                    <li><a href="#ganadoras">Ganadoras</a></li>
+                    <li><a href="#programacion">Programación</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Ícono del usuario -->
+            <a id="user-access" href="#useracces" aria-label="Acceso de usuario">
+                <img src="../assets/icons/user.svg" alt="Acceso de usuario">
+            </a>
+        </header>
+        <main class="container">
+            <!-- Sección vídeo destacado-->
+            <section class="highlight">
+                <video class="banner-video" autoplay muted loop playsinline aria-label="Vídeo destacado sobre ficción etnográfica">
+                    <source src="../assets/videos/The-Missing-Picture.mov" type="video/mp4">
+                    Tu navegador no soporta la reproducción de vídeo.
+                </video>
+                <div class="highlight-title">
+                    <h2>Ficción Etnográfica</h2>
+                    <div class="text-with-icon">
+                        <img src="../assets/icons/award.svg" alt="Película premiada" class="text-icon">
+                        <div class="video-title">
+                            <p>L'Image Manquante</p>
+                            <p>(Rithy Pahn, 2013)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección categorías-->
+        <section class="other-categories">
+            <div id="long-film" role="region" aria-labelledby="long-film-title">
+                <img src="../assets/images/categorias/largometraje.webp" alt="Largometraje" class="round-image">
+                <div class="category-title">
+                    <h2 id="long-film-title">Largometraje</h2>
+                    <p>Historias del mundo en menos de 20 minutos</p>
+                </div>
+            </div>
+            <div id="academic" role="region" aria-labelledby="academic-title">
+                <img src="../assets/images/categorias/academico.webp" alt="Académico" class="round-image">
+                <div class="category-title">
+                    <h2 id="academic-title">Corto académico</h2>
+                    <p>Investigación etnográfica en formato audiovisual</p>
+                </div>
+            </div>
+            <div id="classical" role="region" aria-labelledby="classical-title">
+                <img src="../assets/images/categorias/clasica.webp" alt="Clasico" class="round-image">
+                <div class="category-title">
+                    <h2 id="classical-title">Clásica</h2>
+                    <p>Nuevos contextos para la vieja etnografía</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sección ganadores-->
+        <section class="winners" aria-labelledby="winners-title">
+            <h2 id="winners-title">Ganadores</h2>
+            <div class="winner-detail" role="article">
+                <div class="image-with-icon">
+                    <img src="../assets/icons/award.svg" alt="Película premiada">
+                    <img src="../assets/images/ganadores/language_in_the_market.webp" alt="Language in the market" class="rounded-image">
+                </div>           
+                <div class="film-title">
+                    <h3 class="title">Language in the market</h3>
+                    <h3 class="authors">MELANIE BARRIN, JACK FRIEND, FLORRIE SLATER</h3>
+                    <p>Estudiantes exploran cómo los idiomas conviven en los mercados de Berlín,
+                        revelando historias de diversidad cultural y lingüística.</p>
+                </div>
+            </div>
+            <div class="winner-detail" role="article">
+                <div class="image-with-icon">
+                    <img src="../assets/icons/award.svg" alt="Película premiada">
+                    <img src="../assets/images/ganadores/lousylittlesixpence.webp" alt="Lousy Little Sixpence" class="rounded-image">
+                </div>  
+                <div class="film-title">
+                    <h3 class="title">Lousy Little Sixpence</h3>
+                    <h3 class="authors">Alec Morgan</h3>
+                    <p>La primera película que mostró todos los horrores de las
+                        Generaciones Robadas, y lo hizo con gran elocuencia.</p>
+                </div>
+            </div>
+            <div class="winner-detail" role="article">
+                <div class="image-with-icon">
+                    <img src="../assets/icons/award.svg" alt="Película premiada">
+                    <img src="../assets/images/ganadores/limage_manquante.webp" alt="L'image manquante" class="rounded-image">
+                </div> 
+                <div class="film-title">
+                    <h3 class="title">L’Image Manquante</h3>
+                    <h3 class="authors">Rithy Pahn</h3>
+                    <p>Película de claymation que simula un evento humano real
+                        que no pudo ser grabado: el genocidio camboyano a finales de la década de 1970.</p>
+                </div>
+            </div>
+            <div class="winner-detail" role="article">
+                <div class="image-with-icon">
+                    <img src="../assets/icons/award.svg" alt="Película premiada">
+                    <img src="../assets/images/ganadores/el_eco.webp" alt="El eco" class="rounded-image">
+                </div> 
+                <div class="film-title">
+                    <h3 class="title">El eco</h3>
+                    <h3 class="authors">TATIANA HUERZO</h3>
+                    <p>Una obra maestra que retrata a la población de un remoto valle de México
+                        castigado por el frío y la sequía donde la infancia significa vivir de cerca la muerte.</p>
+                </div>
+            </div>
+        </section>
+        <section class="image-slider" aria-labelledby="carousel-title">
+            <h2 id="carousel-title">Ceremonia #antropocine24</h2>
+            <div id="slider" class="slider-container">
+                <div class="slide active" aria-hidden="false">
+                    <img src="../assets/images/ceremonia/awards_1.webp" alt="Imagen 1 de la ceremonia">
+                    <div class="slide-title">
+                        <h2>#antropocine24</h2>
+                    </div>
+                </div>
+                <div class="slide" aria-hidden="true">
+                    <img src="../assets/images/ceremonia/awards_2.webp" alt="Imagen 2 de la ceremonia">
+                    <div class="slide-title">
+                        <h2>#antropocine24</h2>
+                    </div>
+                </div>
+                <div class="slide" aria-hidden="true">
+                    <img src="../assets/images/ceremonia/awards_3.webp" alt="Imagen 3 de la ceremonia">
+                    <div class="slide-title">
+                        <h2>#antropocine24</h2>
+                    </div>
+                </div>
+                <div class="slide" aria-hidden="true">
+                    <img src="../assets/images/ceremonia/awards_4.webp" alt="Imagen 4 de la ceremonia">
+                    <div class="slide-title">
+                        <h2>#antropocine24</h2>
+                    </div>
+                </div>
+                <div class="slide" aria-hidden="true">
+                    <img src="../assets/images/ceremonia/awards_5.webp" alt="Imagen 5 de la ceremonia">
+                    <div class="slide-title">
+                        <h2>#antropocine24</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles -->
+            <button class="prev" aria-controls="slider" aria-label="Imagen anterior">←</button>
+            <button class="next" aria-controls="slider" aria-label="Imagen siguiente">→</button>
+        </section>
+        <!-- Sección colecciones-->
+        <section class="film-collections" aria-labelledby="collections-title">
+            <h2 id="collections-title">Explora colecciones de películas</h2>
+            <div class="collections-grid">
+                <div class="collection" role="region" aria-labelledby="music-title">
+                    <h3>Colección</h3>
+                    <img src="../assets/images/colecciones/music.webp" alt="Imagen representativa de la música en directo">
+                    <h4 id="music-title">Música en directo</h4>
+                    <p>Punk, rock y folk mundial en su contexto social</p>
+                </div>
+                <div class="collection" role="region" aria-labelledby="crafts-title">
+                    <h3>Colección</h3>
+                    <img src="../assets/images/colecciones/crafts.webp" alt="Imagen representativa de artesanías">
+                    <h4 id="crafts-title">Artesanías</h4>
+                    <p>De los productos sostenibles al mercado global</p>
+                </div>
+                <div class="collection" role="region" aria-labelledby="agriculture-title">
+                    <h3>Colección</h3>
+                    <img src="../assets/images/colecciones/agriculture.webp" alt="Imagen representativa de la agricultura">
+                    <h4 id="agriculture-title">Agricultura</h4>
+                    <p>Es el principio y el fin de toda actividad humana</p>
+                </div>           
+            </div>
+         </section>
+         <!-- Sección últimos comentarios -->
+        <section class="comments" aria-labelledby="comments-title">
+            <h2 id="comments-title">Forma parte de una comunidad</h2>
+            <div class="comment-list" role="list">
+                <div class="comment"  role="listitem" aria-labelledby="comment-cossimo">
+                    <div class="comment-header">
+                        <img src="../assets/icons/comment_inactive.svg" alt="icono de comentario">
+                        <p id="comment-cossimo" class="hastag">#cossimo</p>
+                        <p class="film">'El eco'</p>
+                    </div>
+                    <p class="comment-text">Sembra una finzione. Ma non lo è.
+                        Com'è possibile che su un pianeta così
+                        connesso abbiamo vite così diverse?</p>
+                </div>
+                <div class="comment" role="listitem" aria-labelledby="comment-priski">
+                    <div class="comment-header">
+                        <img src="../assets/icons/comment_inactive.svg" alt="icono de comentario">
+                        <p class="film">Language in the market</p>
+                        <p id="comment-priski" class="hastag">#priski</p>
+                    </div>
+                    <p class="comment-text">La próxima vez que vaya al mercado,
+                        me voy a fijar en cómo escriben los
+                        nombres de los productos. Vivo en
+                        Valencia y nunca había pensado en la
+                        cantidad de idiomas que escucho [...]</p>
+                </div>
+                <div class="comment" role="listitem" aria-labelledby="comment-time2talk">
+                    <div class="comment-header">
+                        <img src="../assets/icons/comment_inactive.svg" alt="icono de comentario">
+                        <p id="comment-time2talk" class="hastag">#time2talk</p>
+                        <p class="film">El eco</p>
+                    </div>
+                    <p class="comment-text">No estaba preparada para ver esta
+                        película, pero quedo agradecida de
+                        haber vivido la experiencia.</p>
+                </div>
+                <div class="comment" role="listitem" aria-labelledby="comment-jadorne">
+                    <div class="comment-header">
+                        <img src="../assets/icons/comment_inactive.svg" alt="icono de comentario">
+                        <p class="film">l’image manquante</p>
+                        <p id="comment-jadorne" class="hastag">#j’adorne</p>
+                    </div>
+                    <p class="comment-text">Comment récupérer toutes les
+                        expériences humaines qui n’ont jamais
+                        pu être filmées? Ce film apporte une
+                        réponse brillante.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sección patrocinadores -->
+        <section class="partners">
+            <h2>Con la colaboración de</h2>
+            <a href="#Cambridge"><img src="../assets/images/patrocinadores/cambridge.webp" alt="Cambridge"></a>
+            <a href="#Ecosia"><img src="../assets/images/patrocinadores/ecosia.webp" alt="Ecosia"></a>
+            <a href="#Kotn"><img src="../assets/images/patrocinadores/kotn.webp" alt="Kotn"></a>
+            <a href="#Tikamoon"><img src="../assets/images/patrocinadores/tikamoon.webp" alt="Tikamoon"></a>
+            <a href="#UOC"><img src="../assets/images/patrocinadores/uoc.webp" alt="UOC"></a>
+            <a href="#WaterStones"><img src="../assets/images/patrocinadores/waterstones.webp" alt="WaterStones"></a>
+        </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-title">ANTROPOCINE |<br>FESTIVAL INTERNACIONAL DE CINE ETNOGRÁFICO</p>
+                <p class="footer-contact">CONTACTO: <a href="mailto:#">ANTROPOCINE@UOC.EDU</a></p>
+                
+                <div class="social-icons">
+                    <a href="#vimeo" aria-label="Ir a Vimeo">
+                        <img src="../assets/icons/vimeo_black.svg" alt="Vimeo">
+                    </a>
+                    <a href="#instagram" aria-label="Ir a Instagram">
+                        <img src="../assets/icons/instagram_black.svg" alt="Instagram">
+                    </a>
+                </div>
+        
+                <nav class="footer-links">
+                    <a href="#mapa-sitio">MAPA DEL SITIO</a> |
+                    <a href="#accesibilidad">ACCESIBILIDAD</a> |
+                    <a href="#candidaturas">CANDIDATURAS</a> |
+                    <a href="#faqs">FAQS</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/slider.js"></script>    
+</body>
+</html>

@@ -172,7 +172,7 @@ nav.dropdown ul li a:hover {
     display: flex; /* Alinea los elementos en fila */
     flex-direction: column; /* Alineación vertical en pantallas pequeñas */
     gap: 2rem; /* Espaciado entre categorías */
-    align-items: left; /* Centra el contenido */
+    align-items: left; /* Alinea a la izquierda */
     padding: 0.5rem 1rem; /* Espaciado interno */
 }
 

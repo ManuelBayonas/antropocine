@@ -172,9 +172,8 @@ nav.dropdown ul li a:hover {
     display: flex; /* Alinea los elementos en fila */
     flex-direction: column; /* Alineación vertical en pantallas pequeñas */
     gap: 2rem; /* Espaciado entre categorías */
-    align-items: center; /* Centra el contenido */
+    align-items: left; /* Centra el contenido */
     padding: 0.5rem 1rem; /* Espaciado interno */
-    justify-content:left;
 }
 
 /* CATEGORÍA INDIVIDUAL */

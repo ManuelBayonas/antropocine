@@ -213,9 +213,15 @@ nav.dropdown ul li a:hover {
 }
 
 /* SECCIÓN GANADORES */
-.winners h2{
+.winners-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaciado entre el título y el grid */
+}
+.winners-section h2{
     text-align: center;
     color: var(--color-raisin-black);
+    margin-top:1rem;
 }
 .winners {
     display: flex; /* Alinea los elementos en fila */

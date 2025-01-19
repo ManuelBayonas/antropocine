@@ -228,6 +228,7 @@ nav.dropdown ul li a:hover {
     flex-direction: column; /* Columnas en pantallas pequeñas */
     gap: 1.5rem; /* Espaciado entre los elementos */
     padding: 2rem 1rem; /* Espaciado interno */
+    padding-top: 0;
     align-items: center; /* Centra el contenido */
     background: linear-gradient(
             rgba(255, 255, 255, 0.95),

@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secciones Antropocine</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <!-- Botón del menú -->
+            <button id="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
+                <img src="assets/icons/menu.svg" alt="Abrir menú" />
+            </button>
+        
+            <!-- Logo -->
+            <a href="index.html" class="header-logo">
+                <img src="assets/icons/antropocine.svg" alt="Antropocine Logo" />
+            </a>
+        
+            <!-- Menú desplegable -->
+            <nav id="menu" class="dropdown" aria-hidden="true">
+                <ul>
+                    <li><a href="festival.html">Festival</a></li>
+                    <li><a href="#ganadoras">Ganadoras</a></li>
+                    <li><a href="#programacion">Programación</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Ícono del usuario -->
+            <a id="user-access" href="#useracces" aria-label="Acceso de usuario">
+                <img src="assets/icons/user.svg" alt="Acceso de usuario" />
+            </a>
+        </header>
+
+        <main class="container">
+            <!-- Sección vídeo destacado-->
+            <section id="highlight-fest" class="highlight">
+                <div  class="highlight">
+                    <a href="#clasica"><img src="assets/images/ganadores/lousylittlesixpence.webp" alt="Lousy Little Sixpence"></a>
+                    <div class="highlight-title">
+                        <a href="#clasica"><h2>Sección Clásica</h2></a>
+                        <p>Películas que buscan reabrir debates
+                            sobre cómo ha virado el enfoque de los
+                            estudios antropológicos con el paso del
+                            tiempo</p>
+                        <div id="comment-fest" class="comment-list" role="list">
+                            <div class="comment"  role="listitem" aria-labelledby="comment-jose_pf">
+                                <div class="comment-header">
+                                    <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                    <p id="comment-jose_pf" class="hastag">#jose_pf</p>
+                                    <p class="film">‘Daguerrotypes’</p>
+                                </div>
+                                <p class="comment-text">Trasciende la vida apacible del francés
+                                    medio. Mira la vida diaria. Hace un
+                                    homenaje a lo cotidiano, sin artificios.</p>
+                            </div>
+                            <div class="comment" role="listitem" aria-labelledby="comment-pearl">
+                                <div class="comment-header">
+                                    <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                    <p id="comment-pearl" class="hastag">#pearl</p>
+                                    <p class="film">'El hombre de la cámara'</p>
+                                </div>
+                                <p class="comment-text">It is made up of hundreds of scenes of
+                                    everyday activity in St. Petersburg, most
+                                    of them exterior shots of the city.</p>
+                            </div>
+                            <div class="comment" role="listitem" aria-labelledby="comment-martabis">
+                                <div class="comment-header">
+                                    <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                    <p id="comment-martabis" class="hastag">#martabis</p>
+                                    <p class="film">'Llévate mis amores'</p>
+                                </div>
+                                <p class="comment-text">¡Qué maravilla! Es la obra maestra de
+                                    Arturo González Villaseñor. Ojalá tuviera
+                                    la mitad de talento que este director.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <a href="#ficcion"><img src="assets/images/ganadores/limage_manquante.webp" alt="L'image manquante"></a>
+                    <div class="highlight-title">
+                        <a href="#ficcion"><h2>Sección Ficción Etnográfica</h2></a>
+                            <p>Un enfoque innovador para reflejar las
+                                historias humanas reales que no han
+                                podido ser captadas por la cámara.</p>
+                    </div>
+                    <div id="comment-fest" class="comment-list" role="list">
+                        <div class="comment"  role="listitem" aria-labelledby="comment-schimo89">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-schimo89" class="hastag">#schimo89</p>
+                                <p class="film">‘Self portrit as a...’</p>
+                            </div>
+                            <p class="comment-text">Es una película que te devuelve el amor
+                                por el cine, si lo habías perdido de ver
+                                tanta basura Marvel. Excelente.</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-j’adorne">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-j’adorne" class="hastag">#j’adorne</p>
+                                <p class="film">'L'image manquante'</p>
+                            </div>
+                            <p class="comment-text">Comment récupérer toutes les
+                                expériences humaines qui n’ont jamais
+                                pu être filmées? Une réponse brillante.</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-kopiois">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-kopiois" class="hastag">#kopiois</p>
+                                <p class="film">'L'image manquante''</p>
+                            </div>
+                            <p class="comment-text">Tôi chưa sẵn sàng để xem bộ phim này,
+                                nhưng tôi rất biết ơn vì đã có được trải
+                                nghiệm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <a href="#cientifico"><img src="assets/images/ganadores/language_in_the_market.webp" alt="Language in the market"></a>
+                    <div class="highlight-title">
+                        <a href="#cientifico"><h2>Sección Cortometraje científico</h2></a>
+                            <p>Realizados por investigadoras o
+                                investigadores, en cualquier etapa de
+                                su carrera científica.</p>
+                    </div>
+                    <div id="comment-fest" class="comment-list" role="list">
+                        <div class="comment"  role="listitem" aria-labelledby="comment-jose_pf">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-jose_pf" class="hastag">#jose_pf</p>
+                                <p class="film">‘Ciro & yo’</p>
+                            </div>
+                            <p class="comment-text">La vida de Ciro resume la historia de
+                                Colombia, una historia conmovedora
+                                de verdad. Recomiendo.</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-schimo89">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-schimo89" class="hastag">#schimo89</p>
+                                <p class="film">'Language in the...'</p>
+                            </div>
+                            <p class="comment-text">Me he quedado con ganas de ver algo
+                                más que entrevistas de profundidad. En
+                                los materiales solo hay transcripciones.</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-priski">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-priski" class="hastag">#priski</p>
+                                <p class="film">'Language in the...'</p>
+                            </div>
+                            <p class="comment-text">La próxima vez que vaya al mercado,
+                                me voy a fijar en cómo escriben los
+                                nombres de los productos. [...]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <a href="#largometraje"><img src="assets/images/ganadores/el_eco.webp" alt="El eco"></a>
+                    <div class="highlight-title">
+                        <a href="#largometraje"><h2>Sección Largometraje</h2></a>
+                            <p>Obras de más de 40 minutos de de
+                                duración, con o sin banda sonora, que
+                                reflejen la realidad humana de alguna
+                                comunidad.</p>
+                    </div>
+                    <div id="comment-fest" class="comment-list" role="list">
+                        <div class="comment"  role="listitem" aria-labelledby="comment-cossimo">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-cossimo" class="hastag">#cossimo</p>
+                                <p class="film">‘El eco’</p>
+                            </div>
+                            <p class="comment-text">Sembra una finzione. Ma non lo è.
+                                Com'è possibile che su un pianeta così
+                                connesso abbiamo vite così diverse?</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-time2talk">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-time2talk" class="hastag">#time2talk</p>
+                                <p class="film">'El eco'</p>
+                            </div>
+                            <p class="comment-text">No estaba preparada para ver esta
+                                película, pero quedo agradecida de
+                                haber vivido la experiencia.</p>
+                        </div>
+                        <div class="comment" role="listitem" aria-labelledby="comment-yessiebee">
+                            <div class="comment-header">
+                                <img src="assets/icons/comment_inactive.svg" alt="icono de comentario">
+                                <p id="comment-yessiebee" class="hastag">#yessiebee</p>
+                                <p class="film">'Honeyland'</p>
+                            </div>
+                            <p class="comment-text">What at first seems like a balm for her
+                                solitude becomes a source of tension
+                                as they want to practice beekeeping.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="collaborate">
+                <div class="collaborate-item">
+                    <h2>Enseña</h2>
+                    <a href="#enseña" class="buttons">Materiales disponibles</a>
+                </div>
+                <div class="collaborate-item">
+                    <h2>Concursa</h2>
+                    <a href="#concursa" class="buttons">Formulario de candidatura</a>
+                </div>
+                <div class="collaborate-item">
+                    <h2>Proyecta</h2>
+                    <a href="#proyecta" class="buttons">Solicitud de licencias</a>
+                </div>
+            </section>
+                <!-- Sección patrocinadores -->
+            <section class="partners">
+                <h2>Con la colaboración de</h2>
+                <a href="#Cambridge"><img src="assets/images/patrocinadores/cambridge.webp" alt="Cambridge"></a>
+                <a href="#Ecosia"><img src="assets/images/patrocinadores/ecosia.webp" alt="Ecosia"></a>
+                <a href="#Kotn"><img src="assets/images/patrocinadores/kotn.webp" alt="Kotn"></a>
+                <a href="#Tikamoon"><img src="assets/images/patrocinadores/tikamoon.webp" alt="Tikamoon"></a>
+                <a href="#UOC"><img src="assets/images/patrocinadores/uoc.webp" alt="UOC"></a>
+                <a href="#WaterStones"><img src="assets/images/patrocinadores/waterstones.webp" alt="WaterStones"></a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <p class="footer-title">ANTROPOCINE |<br>FESTIVAL INTERNACIONAL DE CINE ETNOGRÁFICO</p>
+                <p class="footer-contact">CONTACTO: <a href="#mailto:#">ANTROPOCINE@UOC.EDU</a></p>
+                <div class="social-icons">
+                    <a href="#vimeo" aria-label="Ir a Vimeo">
+                        <img src="assets/icons/vimeo_black.svg" alt="Vimeo">
+                    </a>
+                    <a href="#instagram" aria-label="Ir a Instagram">
+                        <img src="assets/icons/instagram_black.svg" alt="Instagram">
+                    </a>
+                </div>
+                <nav class="footer-links">
+                    <a href="#mapa-sitio">MAPA DEL SITIO</a> |
+                    <a href="#accesibilidad">ACCESIBILIDAD</a> |
+                    <a href="#candidaturas">CANDIDATURAS</a> |
+                    <a href="#faqs">FAQS</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
 

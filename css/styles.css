@@ -2,13 +2,12 @@
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
-    max-width: 1200px;
+    max-width: 1280px;
 
 }
 a {
     text-decoration: none;
 }
-
 /* CONTENEDOR PRINCIPAL */
 .container {
     max-width: 1200px; /* Ancho máximo */
@@ -124,6 +123,11 @@ nav.dropdown ul li a:hover {
     overflow: hidden;
 }
 
+.highlight img{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+}
 /* VÍDEO */
 .banner-video {
     width: 100%;
@@ -140,7 +144,12 @@ nav.dropdown ul li a:hover {
     padding: 0; /* Elimina el padding existente */
     margin-left: 1rem;
 }
-
+.highlight-title p,
+.highlight-title h2{
+    margin-right: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-raisin-black);
+}
 
 /* TEXTO CON ICONO */
 .text-with-icon {
@@ -175,7 +184,7 @@ nav.dropdown ul li a:hover {
     display: flex; /* Alinea los elementos en fila */
     flex-direction: column; /* Alineación vertical en pantallas pequeñas */
     gap: 2rem; /* Espaciado entre categorías */
-    align-items: flex-start; /* Alinea al borde del contenedor flex  */
+    align-items: flex-start; /* Centra el contenido */
     padding: 0.5rem 1rem; /* Espaciado interno */
 }
 
@@ -245,10 +254,11 @@ nav.dropdown ul li a:hover {
     display: flex; /* Alinea imagen y texto en fila */
     flex-direction: column; /* Vertical para pantallas pequeñas */
     gap: 1rem; /* Espaciado entre imagen y texto */
-    align-items: center; /* Centra el contenido */
+    align-items: flex-start; /* Centra el contenido */
     max-width: 600px; /* Ancho máximo */
-    text-align: center; /* Centra el texto */
+    text-align: left; /* Centra el texto */
 }
+
 .image-with-icon{
     display:flex;
     flex-direction: row;/*Coloca el icono al lado de la imagen*/
@@ -271,6 +281,7 @@ nav.dropdown ul li a:hover {
     flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio */
     gap: 1rem; /* Espaciado entre los elementos si se ajustan */
     width: 100%; /* Asegura que ocupen el ancho completo */
+    justify-self: start;
 }
 /* TÍTULO DE LA PELÍCULA */
 .film-title .title {
@@ -296,7 +307,7 @@ nav.dropdown ul li a:hover {
     color: var(--color-watercolor-gray); /* Color gris */
     line-height: 1.6; /* Espaciado entre líneas */
     margin: 0;
-    text-align: center;
+    
 }
 
 /*SECCIÓN SLIDER*/
@@ -370,7 +381,7 @@ button.prev:hover, button.next:hover {
     bottom: 0; /* Posición desde el borde inferior */
     right: 0; /* Posición desde el borde derecho */
     padding: 0rem 1rem; /* Espaciado interno */
-    color:var(--color-moss-green);
+    color: var(--color-moss-green);
     z-index: 10; /* Asegura que esté sobre la imagen */
 }
 
@@ -422,7 +433,7 @@ button.prev:hover, button.next:hover {
     position: absolute;
     top: 10px; /* Posición desde la parte superior */
     left: 15px; /* Posición desde la izquierda */
-    color:var(--color-watercolor-gray); 
+    color: var(--color-watercolor-gray); 
     padding: 0.3rem 0.5rem; /* Espaciado interno */
     background-color:rgba(255, 255, 255, 0.8);/*Fondo blanco semitransparente*/
     border-radius: 5px; /* Bordes redondeados */
@@ -554,7 +565,7 @@ button.prev:hover, button.next:hover {
     text-align: left; 
     padding: 0.3rem 1rem; /* Espaciado interno */
     padding-bottom: 3.6rem;
-    color:var(--color-raisin-black); /* Color de texto */
+    color: var(--color-raisin-black); /* Color de texto */
 }
 
 /* TÍTULO */
@@ -574,7 +585,7 @@ button.prev:hover, button.next:hover {
 }
 
 .footer-contact a {
-    color:var(--color-raisin-black);
+    color: var(--color-raisin-black);
     text-decoration: none;
     
 }
@@ -605,7 +616,7 @@ button.prev:hover, button.next:hover {
 }
 
 .footer-links a {
-    color:var(--color-raisin-black);
+    color: var(--color-raisin-black);
     text-decoration: none;
     padding: 0 0.5rem; /* Espaciado entre enlaces */
 }
@@ -614,6 +625,39 @@ button.prev:hover, button.next:hover {
     color: var(--color-clay-orange); /* Cambia de color al hover */
 }
 
+/*SECCIÓN COLABORA*/
+.collaborate {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Espaciado entre cada bloque (título y botón) */
+    padding: 2rem 1rem; /* Espaciado interno para el contenedor */
+    background-color: var(--color-white); /* Fondo blanco */
+    margin-bottom: 2rem;
+}
+.collaborate-item {
+    text-align: center; /* Centrar el contenido dentro de cada bloque */
+}
+.collaborate-item h2 {
+    color: var(--color-moss-green); /* Color verde claro */
+    margin-bottom: 1rem; /* Espaciado entre el título y el botón */
+}
+.buttons {
+    text-transform: uppercase;
+    display: inline-block; /* Comportamiento de botón */
+    padding: 0.8rem 2rem; /* Espaciado interno del botón */
+    border-radius: 50px; /* Bordes redondeados */
+    background: linear-gradient(to top right, var(--color-clay-orange)2%,var(--color-moss-green)100%); /* Gradiente */
+    color: var(--color-raisin-black); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /*negrita */
+    font-size: 0.9rem;
+    text-decoration: none;
+    width: 100%; /*ocupa todo el ancho disponible */
+    max-width: 300px; /* tamaño máximo del botón */
+    text-align: center; /* Centrar texto del botón */
+}
+/***********************************************/
 /* RESPONSIVE: ALINEACIÓN EN PANTALLAS GRANDES */
 @media (min-width: 1200px) {
     /*HEADER*/
@@ -917,11 +961,31 @@ button.prev:hover, button.next:hover {
     .comment-list .comment:nth-child(4) {
         grid-column: 3; /* Coloca el cuarto comentario en la tercera columna (nueva fila) */
     }
-
+    /*ajuste del grid sólo para la página festival*/
+    #comment-fest.comment-list .comment:nth-child(1){
+        grid-column: 1;
+        
+    }
+    #comment-fest.comment-list .comment:nth-child(2){
+        grid-column: 2;
+        
+    }
+    #comment-fest.comment-list .comment:nth-child(3){
+        grid-column: 3;
+        
+    }
     .comment-header {
         justify-content: start; /* Alineación izquierda para el header */
     }
-
+    .collaborate {
+        display: flex;
+        flex-direction: row; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center;
+        gap: 2rem; /* Espaciado entre cada bloque (título y botón) */
+        padding: 2rem 1rem; /* Espaciado interno para el contenedor */
+        background-color: var(--color-white); /* Fondo blanco */
+    }
     /*SECCIÓN PATROCINADORES*/
     .partners {
         grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */

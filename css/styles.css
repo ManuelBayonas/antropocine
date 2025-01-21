@@ -141,8 +141,8 @@ nav.dropdown ul li a:hover {
     flex-direction: column; /* Título encima, texto con ícono debajo */
     align-items: flex-start; /* Todo alineado al borde izquierdo */
     width: 100%; /* Asegura que ocupa el ancho completo */
-    padding: 0; /* Elimina el padding existente */
-    margin-left: 1rem;
+    padding-left: 1rem; /* Elimina el padding existente */
+    /*margin-left: 1rem;*/
 }
 .highlight-title p,
 .highlight-title h2{
@@ -150,7 +150,15 @@ nav.dropdown ul li a:hover {
     margin-bottom: 0.5rem;
     color: var(--color-raisin-black);
 }
-
+#highlight-fest > .highlight > .highlight-title{
+    border-bottom: 1px solid var(--color-clay-orange);
+    margin-bottom: 1.5rem;
+}
+#highlight-fest > .highlight > .comment-list{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
 /* TEXTO CON ICONO */
 .text-with-icon {
     display: flex; /* Flex para organizar el contenido */
@@ -313,7 +321,7 @@ nav.dropdown ul li a:hover {
 /*SECCIÓN SLIDER*/
 .image-slider h2{
     text-align: center;
-    color: var(--color-moss-green);
+    color: var(--color-raisin-black);
 }
 /* CONTENEDOR SLIDER PRINCIPAL */
 .image-slider {
@@ -381,7 +389,8 @@ button.prev:hover, button.next:hover {
     bottom: 0; /* Posición desde el borde inferior */
     right: 0; /* Posición desde el borde derecho */
     padding: 0rem 1rem; /* Espaciado interno */
-    color: var(--color-moss-green);
+    color: var(--color-raisin-black);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 10; /* Asegura que esté sobre la imagen */
 }
 
@@ -395,7 +404,7 @@ button.prev:hover, button.next:hover {
 }
 
 .film-collections h2 {
-    color: var(--color-moss-green); /* Color del texto */
+    color: var(--color-raisin-black); /* Color del texto */
     text-transform: uppercase; /* Texto en mayúsculas */
     letter-spacing: 1px; /* Espaciado entre letras */
     margin: 0 auto; /* Centra el título */
@@ -433,7 +442,7 @@ button.prev:hover, button.next:hover {
     position: absolute;
     top: 10px; /* Posición desde la parte superior */
     left: 15px; /* Posición desde la izquierda */
-    color: var(--color-watercolor-gray); 
+    color: var(--color-raisin-black); 
     padding: 0.3rem 0.5rem; /* Espaciado interno */
     background-color:rgba(255, 255, 255, 0.8);/*Fondo blanco semitransparente*/
     border-radius: 5px; /* Bordes redondeados */
@@ -476,7 +485,7 @@ button.prev:hover, button.next:hover {
 .comments h2 {
     text-align: center; /* Centra el texto del encabezado */
     text-transform: uppercase;
-    color: var(--color-moss-green); /* Color verde claro */
+    color: var(--color-raisin-black); /* Color negro */
     margin-bottom: 1.5rem; /* Espaciado inferior */
     letter-spacing: 0.1rem; /* Espaciado entre letras */
 }
@@ -545,7 +554,7 @@ button.prev:hover, button.next:hover {
 .partners h2 {
     text-align: center;
     text-transform: uppercase;
-    color: var(--color-moss-green); /* Color verde */
+    color: var(--color-raisin-black); /* Color negro */
     margin-bottom: 2rem; /* Espaciado inferior */
     letter-spacing: 0.1rem; /* Espaciado entre letras */
     grid-column: 1 / -1; /* Título ocupa todo el ancho */
@@ -639,7 +648,7 @@ button.prev:hover, button.next:hover {
     text-align: center; /* Centrar el contenido dentro de cada bloque */
 }
 .collaborate-item h2 {
-    color: var(--color-moss-green); /* Color verde claro */
+    color: var(--color-raisin-black); /* Color verde claro */
     margin-bottom: 1rem; /* Espaciado entre el título y el botón */
 }
 .buttons {
@@ -961,19 +970,21 @@ button.prev:hover, button.next:hover {
     .comment-list .comment:nth-child(4) {
         grid-column: 3; /* Coloca el cuarto comentario en la tercera columna (nueva fila) */
     }
+
     /*ajuste del grid sólo para la página festival*/
-    #comment-fest.comment-list .comment:nth-child(1){
+    .comment-list[role="list"] > .comment:nth-child(1) {
+        /* Aplica al primer hijo con clase .comment dentro de .comment-list[role="list"] */
         grid-column: 1;
-        
     }
-    #comment-fest.comment-list .comment:nth-child(2){
+    .comment-list[role="list"] > .comment:nth-child(2) {
+        /* Aplica al segundo hijo con clase .comment dentro de .comment-list[role="list"] */
         grid-column: 2;
-        
     }
-    #comment-fest.comment-list .comment:nth-child(3){
+    .comment-list[role="list"] > .comment:nth-child(3) {
+        /* Aplica al tercer hijo con clase .comment dentro de .comment-list[role="list"] */
         grid-column: 3;
-        
     }
+
     .comment-header {
         justify-content: start; /* Alineación izquierda para el header */
     }
